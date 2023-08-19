@@ -1,0 +1,51 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("https://media4.giphy.com/media/oOxSXI5D2cvc6kYSvw/giphy.gif?cid=ecf05e47p3of6ikzvzpq39zt1mn1h4hz22pp2vz46lsxvpeb&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.title__container {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  position: relative;
+  font-size: 10vw;
+  color: transparent;
+  border: none;
+  -webkit-text-stroke: 0.3vw transparent;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #00ff33;
+  -webkit-text-stroke: 0vw #242424;
+  border-right: 2px solid #00ff33;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
